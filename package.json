@@ -21,7 +21,8 @@
     "win-fork": "1.0.0",
     "archy": "0.0.2",
     "netrc": "~0.1.0",
-    "debug": "*"
+    "debug": "*",
+    "request": "~2.21.0"
   },
   "devDependencies": {
     "express": "3.0.0",
