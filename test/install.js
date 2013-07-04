@@ -74,6 +74,8 @@ describe('component install', function(){
       exec('bin/component install component/overlay component/zepto', function(err, stdout){
         if (err) return done(err);
         stdout.should.include('install');
+        // This fails due to the batch module having a bug in that it never completes.
+        // Line 65 in batch.js is the problem area.
         stdout.should.include('complete');
         var json = require(path.resolve('components/component-emitter/component.json'));
         json.name.should.equal('emitter');
